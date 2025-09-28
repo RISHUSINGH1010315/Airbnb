@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
     <title>The Onyx Loft - A Modern Retreat</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,10 +18,11 @@
             font-family: 'Playfair Display', serif;
         }
         .hero-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600585152225-3589FE9342AE?q=80&w=2070&auto=format&fit=crop');
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.pexels.com/photos/3773574/pexels-photo-3773574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Added for parallax effect */
+            background-attachment: fixed; /* Parallax effect */
+            transition: background-image 1s ease-in-out; /* For smooth image transition */
         }
         .gallery-img {
             transition: transform 0.3s ease, filter 0.3s ease;
@@ -100,7 +101,7 @@
             transform: translateX(0);
         }
 
-        /* Booking Modal Styles */
+        /* Modal Styles */
         .modal {
             opacity: 0;
             visibility: hidden;
@@ -167,7 +168,7 @@
 
     <!-- Hero Section -->
     <section class="hero-bg h-screen flex items-center justify-center text-center text-white">
-        <div class="max-w-3xl mx-auto px-4 scroll-reveal">
+        <div class="max-w-3xl mx-auto px-4">
             <h2 class="text-5xl md:text-7xl font-bold font-playfair leading-tight mb-4">Experience Urban Elegance</h2>
             <p class="text-lg md:text-xl text-gray-300 mb-8">Your exclusive sanctuary in the heart of the city. Unforgettable stays, timeless memories.</p>
             <button class="btn-primary font-bold py-3 px-8 rounded-lg text-lg shadow-lg booking-trigger">Book Your Stay</button>
@@ -182,21 +183,24 @@
                 <h3 class="text-4xl font-bold font-playfair">An Urban Masterpiece</h3>
                 <p class="text-gray-400 mt-2 max-w-2xl mx-auto">Discover a space where modern design meets ultimate comfort. Every corner is crafted for an unparalleled guest experience.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="md:col-span-2 rounded-lg overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1558002118-ab94a4904533?q=80&w=1932&auto=format&fit=crop" alt="Spacious living area" class="w-full h-full object-cover gallery-img">
-                </div>
-                <div class="rounded-lg overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1604707677589-688915a2b849?q=80&w=1887&auto=format&fit=crop" alt="Modern kitchenette" class="w-full h-full object-cover gallery-img">
-                </div>
-                <div class="rounded-lg overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16433d?q=80&w=2070&auto=format&fit=crop" alt="Cozy bedroom" class="w-full h-full object-cover gallery-img">
-                </div>
-                 <div class="rounded-lg overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=2057&auto=format&fit=crop" alt="Sleek bathroom" class="w-full h-full object-cover gallery-img">
-                </div>
-                 <div class="rounded-lg overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1534349762234-722921455449?q=80&w=1887&auto=format&fit=crop" alt="Decor detail" class="w-full h-full object-cover gallery-img">
+            <!-- Centered container for the gallery -->
+            <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    <div class="md:col-span-2 md:row-span-2 rounded-lg overflow-hidden">
+                        <img src="https://images.pexels.com/photos/6585614/pexels-photo-6585614.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Spacious living area" class="w-full h-full object-cover gallery-img">
+                    </div>
+                    <div class="rounded-lg overflow-hidden">
+                        <img src="https://images.pexels.com/photos/7031705/pexels-photo-7031705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Modern kitchenette" class="w-full h-full object-cover aspect-square gallery-img">
+                    </div>
+                    <div class="rounded-lg overflow-hidden">
+                        <img src="https://images.pexels.com/photos/6758775/pexels-photo-6758775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Cozy bedroom" class="w-full h-full object-cover aspect-square gallery-img">
+                    </div>
+                    <div class="rounded-lg overflow-hidden">
+                        <img src="https://images.pexels.com/photos/6775268/pexels-photo-6775268.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Sleek bathroom" class="w-full h-full object-cover aspect-square gallery-img">
+                    </div>
+                    <div class="rounded-lg overflow-hidden">
+                        <img src="https://images.pexels.com/photos/4352247/pexels-photo-4352247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Decor detail" class="w-full h-full object-cover aspect-square gallery-img">
+                    </div>
                 </div>
             </div>
         </section>
@@ -208,34 +212,24 @@
                 <p class="text-gray-400 mt-2 max-w-2xl mx-auto">Read about the experiences of our guests and discover our favorite local spots.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Blog Post 1 -->
                 <div class="bg-[#1a1a1a] rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
-                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2047&auto=format&fit=crop" alt="A cozy local cafe" class="w-full h-48 object-cover">
+                    <img src="https://images.pexels.com/photos/3153531/pexels-photo-3153531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="A travel map" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <span class="text-sm text-red-500 font-semibold">LOCAL GUIDE</span>
-                        <h4 class="text-2xl font-bold font-playfair mt-2 mb-3 text-white">The City's Best Kept Secret: A Coffee Lover's Guide</h4>
-                        <p class="text-gray-400 mb-4">Just a 5-minute walk from the loft, you'll find the most aromatic coffee and delightful pastries. Here's why it's a must-visit...</p>
-                        <a href="#" class="font-semibold text-red-500 hover:text-red-400">Read More &rarr;</a>
+                        <h4 class="text-2xl font-bold font-playfair mt-2 mb-3 text-white">Explore Delhi & Greater Noida</h4>
+                        <p class="text-gray-400 mb-4">Discover the iconic landmarks of Delhi and the modern attractions of Gaur City, all within easy reach of the loft.</p>
+                        <button class="font-semibold text-red-500 hover:text-red-400 local-guide-trigger">Explore Now &rarr;</button>
                     </div>
                 </div>
                 <!-- Blog Post 2 -->
                 <div class="bg-[#1a1a1a] rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
-                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070&auto=format&fit=crop" alt="A couple enjoying their stay" class="w-full h-48 object-cover">
+                    <img src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="A couple relaxing on a sofa" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <span class="text-sm text-red-500 font-semibold">GUEST STORY</span>
                         <h4 class="text-2xl font-bold font-playfair mt-2 mb-3 text-white">"Our Perfect Anniversary Getaway"</h4>
                         <p class="text-gray-400 mb-4">"We were looking for a romantic and stylish place to celebrate, and The Onyx Loft exceeded all our expectations..."</p>
-                        <a href="#" class="font-semibold text-red-500 hover:text-red-400">Read More &rarr;</a>
-                    </div>
-                </div>
-                <!-- Blog Post 3 -->
-                <div class="bg-[#1a1a1a] rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
-                     <img src="https://images.unsplash.com/photo-1543321269-9d869203a05f?q=80&w=1974&auto=format&fit=crop" alt="City nightlife" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-sm text-red-500 font-semibold">EXPLORE</span>
-                        <h4 class="text-2xl font-bold font-playfair mt-2 mb-3 text-white">A Guide to the City's Vibrant Nightlife</h4>
-                        <p class="text-gray-400 mb-4">From chic rooftop bars to hidden speakeasies, the city comes alive at night. Here are our top picks for an unforgettable evening out.</p>
                         <a href="#" class="font-semibold text-red-500 hover:text-red-400">Read More &rarr;</a>
                     </div>
                 </div>
@@ -357,8 +351,8 @@
             <h3 class="text-3xl font-playfair font-bold text-white mb-6 text-center">Book Your Stay</h3>
             <p class="text-center text-gray-400 mb-8">Select your preferred booking platform below.</p>
             <div class="space-y-4">
-                <!-- IMPORTANT: Replace '#' with your actual booking links -->
-                <a href="https://www.booking.com/city/in/ghaziabad.html" target="_blank" class="block w-full text-center p-4 rounded-lg bg-[#003580] hover:bg-opacity-90 text-white font-bold transition-all duration-300 transform hover:scale-105">Booking.com</a>
+                <!-- IMPORTANT: The links below are examples. Replace them with the direct URLs to YOUR property on each site. -->
+                <a href="https://www.booking.com/searchresults.html?ss=Ghaziabad" target="_blank" class="block w-full text-center p-4 rounded-lg bg-[#003580] hover:bg-opacity-90 text-white font-bold transition-all duration-300 transform hover:scale-105">Booking.com</a>
                 <a href="https://www.oyorooms.com/hotels-in-ghaziabad/" target="_blank" class="block w-full text-center p-4 rounded-lg bg-[#EE2E24] hover:bg-opacity-90 text-white font-bold transition-all duration-300 transform hover:scale-105">OYO</a>
                 <a href="https://www.makemytrip.com/hotels/ghaziabad-hotels.html" target="_blank" class="block w-full text-center p-4 rounded-lg bg-[#FF6D38] hover:bg-opacity-90 text-white font-bold transition-all duration-300 transform hover:scale-105">MakeMyTrip</a>
                 <a href="https://www.agoda.com/city/ghaziabad-in.html" target="_blank" class="block w-full text-center p-4 rounded-lg bg-[#532878] hover:bg-opacity-90 text-white font-bold transition-all duration-300 transform hover:scale-105">Agoda</a>
@@ -366,10 +360,75 @@
         </div>
     </div>
 
+    <!-- Local Guide Modal -->
+    <div id="local-guide-modal" class="modal fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-[100] px-4">
+        <div class="modal-content bg-[#1a1a1a] rounded-lg p-8 max-w-3xl w-full relative h-[90vh] overflow-y-auto">
+            <button id="close-guide-modal-btn" class="absolute top-4 right-5 text-gray-400 hover:text-white transition-colors z-10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <div class="text-center mb-10">
+                 <h3 class="text-4xl font-playfair font-bold text-white">Explore Like a Local</h3>
+                 <p class="text-gray-400 mt-2">Our curated guide to the best spots nearby.</p>
+            </div>
+
+            <!-- Delhi Section -->
+            <div class="mb-12">
+                <h4 class="text-3xl font-playfair font-bold text-white mb-6 border-b-2 border-red-600 pb-2 inline-block">Iconic Delhi</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <img src="https://images.pexels.com/photos/3571264/pexels-photo-3571264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="India Gate" class="rounded-lg mb-4 w-full h-56 object-cover">
+                        <h5 class="text-xl font-bold font-playfair text-white">India Gate</h5>
+                        <p class="text-gray-400">A towering war memorial perfect for an evening stroll.</p>
+                    </div>
+                     <div>
+                        <img src="https://images.pexels.com/photos/3565633/pexels-photo-3565633.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Qutub Minar" class="rounded-lg mb-4 w-full h-56 object-cover">
+                        <h5 class="text-xl font-bold font-playfair text-white">Qutub Minar</h5>
+                        <p class="text-gray-400">A stunning 73m tall minaret, a masterpiece of Indo-Islamic architecture.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Greater Noida Section -->
+            <div>
+                 <h4 class="text-3xl font-playfair font-bold text-white mb-6 border-b-2 border-red-600 pb-2 inline-block">Gaur City, Greater Noida</h4>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <img src="https://images.pexels.com/photos/2774547/pexels-photo-2774547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Modern Shopping Mall" class="rounded-lg mb-4 w-full h-56 object-cover">
+                        <h5 class="text-xl font-bold font-playfair text-white">Gaur City Mall</h5>
+                        <p class="text-gray-400">Your one-stop destination for shopping, movies, and dining.</p>
+                    </div>
+                     <div>
+                        <img src="https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Restaurant interior" class="rounded-lg mb-4 w-full h-56 object-cover">
+                        <h5 class="text-xl font-bold font-playfair text-white">Diverse Culinary Scene</h5>
+                        <p class="text-gray-400">From fine dining to street food, the area offers a wide variety of delights.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const welcomeScreen = document.getElementById('welcome-screen');
             const bookingModal = document.getElementById('booking-modal');
+            const guideModal = document.getElementById('local-guide-modal');
+
+            // Hero Image Slider
+            const heroSection = document.querySelector('.hero-bg');
+            const heroImages = [
+                'https://images.pexels.com/photos/3773574/pexels-photo-3773574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+                'https://images.pexels.com/photos/6434622/pexels-photo-6434622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+                'https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+            ];
+            let currentImageIndex = 0;
+
+            setInterval(() => {
+                currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+                heroSection.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('${heroImages[currentImageIndex]}')`;
+            }, 5000); // Change image every 5 seconds
 
             // Welcome Screen Logic
             if (!sessionStorage.getItem('welcomeShown')) {
@@ -452,6 +511,30 @@
             bookingModal.addEventListener('click', (event) => {
                 if (event.target === bookingModal) {
                     closeModal();
+                }
+            });
+
+            // --- Local Guide Modal Logic ---
+            const guideTriggers = document.querySelectorAll('.local-guide-trigger');
+            const closeGuideModalBtn = document.getElementById('close-guide-modal-btn');
+
+            const openGuideModal = () => {
+                guideModal.classList.add('is-open');
+                document.body.classList.add('modal-open');
+            };
+
+            const closeGuideModal = () => {
+                guideModal.classList.remove('is-open');
+                 if (!mobileMenu.classList.contains('open') && !bookingModal.classList.contains('is-open')) {
+                    document.body.classList.remove('modal-open');
+                }
+            };
+            
+            guideTriggers.forEach(btn => btn.addEventListener('click', openGuideModal));
+            closeGuideModalBtn.addEventListener('click', closeGuideModal);
+            guideModal.addEventListener('click', (event) => {
+                if (event.target === guideModal) {
+                    closeGuideModal();
                 }
             });
         });
